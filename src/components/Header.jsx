@@ -22,7 +22,7 @@ export function Header() {
 
   const desktopNavigation = [
     ...navigation,
-    { name: "Shop", href: "https://www.choicefinefoods.com/shop-3", external: true }
+    { name: "Shop", href: "#", disabled: true }
   ];
 
   const isActive = (href) => {
@@ -108,19 +108,31 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-6 border-t border-gray-200/50 bg-white/95 backdrop-blur-md rounded-xl shadow-xl mx-4">
             <div className="space-y-2 px-6">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center px-4 py-4 rounded-xl font-medium transition-colors text-lg touch-target",
-                    isActive(item.href) ? "text-primaryBlue bg-primaryBlue/10 shadow-sm" : "text-neutralBlack hover:text-primaryBlue hover:bg-lightGrey"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  style={{ fontFamily: 'Gilroy, Gilroy Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif', fontWeight: 700 }}
-                >
-                  {item.name}
-                </a>
+              {desktopNavigation.map((item) => (
+                item.disabled ? (
+                  <span
+                    key={item.name}
+                    className={cn(
+                      "flex items-center px-4 py-4 rounded-xl font-medium text-lg touch-target text-gray-400 cursor-not-allowed"
+                    )}
+                    style={{ fontFamily: 'Gilroy, Gilroy Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif', fontWeight: 700 }}
+                  >
+                    {item.name}
+                  </span>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center px-4 py-4 rounded-xl font-medium transition-colors text-lg touch-target",
+                      isActive(item.href) ? "text-primaryBlue bg-primaryBlue/10 shadow-sm" : "text-neutralBlack hover:text-primaryBlue hover:bg-lightGrey"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ fontFamily: 'Gilroy, Gilroy Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif', fontWeight: 700 }}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               
               {/* Mobile Contact Info */}
