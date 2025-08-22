@@ -40,7 +40,7 @@ function App() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 pt-24">
         {/* Minimal Hero Section */}
-        <section className="bg-white border-b border-slate-200 h-24 sm:h-32 flex items-end justify-center pb-1 sm:pb-2">
+        <section className="bg-white border-b border-slate-200 h-24 sm:h-32 flex items-center justify-center">
           <div className="text-center px-4">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-1 sm:mb-2">
               Shop Categories
