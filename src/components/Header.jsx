@@ -22,7 +22,7 @@ export function Header() {
 
   const desktopNavigation = [
     ...navigation,
-    { name: "Shop", href: "#", disabled: true }
+    { name: "Shop", href: "#", clickable: true }
   ];
 
   const isActive = (href) => {
@@ -109,16 +109,17 @@ export function Header() {
           <div className="lg:hidden mt-4 py-6 border-t border-gray-200/50 bg-white/95 backdrop-blur-md rounded-xl shadow-xl mx-4">
             <div className="space-y-2 px-6">
               {desktopNavigation.map((item) => (
-                item.disabled ? (
-                  <span
+                item.clickable ? (
+                  <button
                     key={item.name}
                     className={cn(
-                      "flex items-center px-4 py-4 rounded-xl font-medium text-lg touch-target text-gray-400 cursor-not-allowed"
+                      "flex items-center px-4 py-4 rounded-xl font-medium transition-colors text-lg touch-target text-neutralBlack hover:text-primaryBlue hover:bg-lightGrey w-full text-left"
                     )}
+                    onClick={() => setIsMobileMenuOpen(false)}
                     style={{ fontFamily: 'Gilroy, Gilroy Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif', fontWeight: 700 }}
                   >
                     {item.name}
-                  </span>
+                  </button>
                 ) : (
                   <a
                     key={item.name}
