@@ -16,8 +16,8 @@ export function Header() {
   }, []);
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Catalog", href: "/catalog" },
+    { name: "Home", href: "https://www.choicefinefoods.com/", external: true },
+    { name: "Catalog", href: "https://www.choicefinefoods.com/", external: true },
   ];
 
   const desktopNavigation = [
