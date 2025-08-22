@@ -66,30 +66,10 @@ function App() {
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10">
-                  <div className="mb-3 sm:mb-4">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-primaryBlue transition-colors duration-300 mb-2 sm:mb-3 leading-tight">
-                      All Products
-                    </h3>
-                    <div className="flex items-center justify-center">
-                      <span className="text-sm sm:text-base lg:text-lg text-slate-600 font-medium">
-                        1000+ items
-                      </span>
-                      <div className="ml-3 sm:ml-4 w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 bg-slate-100 group-hover:bg-primaryBlue rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-                        <svg 
-                          className="w-3 sm:w-3.5 lg:w-4 h-3 sm:h-3.5 lg:h-4 text-slate-600 group-hover:text-white transform group-hover:translate-x-0.5 lg:group-hover:translate-x-1 transition-all duration-300" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Bottom accent line */}
-                  <div className="w-0 group-hover:w-full h-0.5 sm:h-1 bg-gradient-to-r from-primaryBlue to-slate-300 transition-all duration-500 rounded-full"></div>
+                <div className="relative z-10 h-full flex items-center justify-center">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 group-hover:text-primaryBlue transition-colors duration-300 text-center leading-tight">
+                    All Products
+                  </h3>
                 </div>
               </button>
             </div>
@@ -111,30 +91,10 @@ function App() {
                   </div>
                   
                   {/* Content */}
-                  <div className="relative z-10">
-                    <div className="mb-3 sm:mb-4">
-                      <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primaryBlue transition-colors duration-300 mb-2 leading-tight">
-                        {category.name}
-                      </h3>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs sm:text-sm text-slate-500 font-medium">
-                          {category.count} items
-                        </span>
-                        <div className="w-5 sm:w-6 h-5 sm:h-6 bg-slate-100 group-hover:bg-primaryBlue rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-                          <svg 
-                            className="w-2.5 sm:w-3 h-2.5 sm:h-3 text-slate-600 group-hover:text-white transform group-hover:translate-x-0.5 transition-all duration-300" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Bottom accent line */}
-                    <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-primaryBlue to-slate-300 transition-all duration-500 rounded-full"></div>
+                  <div className="relative z-10 h-full flex items-center justify-center">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 group-hover:text-primaryBlue transition-colors duration-300 text-center leading-tight">
+                      {category.name}
+                    </h3>
                   </div>
                 </button>
               ))}
